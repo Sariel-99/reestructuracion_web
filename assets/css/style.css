@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: flex-start;
+    align-items:center;
+    min-height: 100vh;
+    background: grey;
+}
+.nav{
+    margin-left: 10px;
+    position: relative;
+    width: 70px;
+    height: 420px;
+    background: black;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+}
+
+.nav ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.nav ul li{
+    position: relative;
+    list-style: none;
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+    border: 4px solid black;
+    box-sizing: border-box;
+}
+
+.nav ul li:hover{
+    background: chartreuse;
+}
+.nav ul li a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    color: black;
+}
+
+.nav ul li a .icon{
+    position: relative;
+    display: block;
+    line-height: 60px;
+    text-align: center;
+    color: white;
+}
+
+.nav ul li:hover a .icon{
+    color:black;
+}
+
+.nav ul li a .icon .fa{
+    font-size: 24px;
+}
+
+.nav ul li a .title{
+    position: absolute;
+    left: 70px;
+    display: block;
+    background: white;
+    width: auto;
+    padding: 5px 10px ;
+    transform: translateY(-15%) translateX(0px);
+    border-radius: 6px;
+    box-shadow: 0 5px rgba(0,0,0,0.1);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+.nav ul li:hover a .title{
+    transform: translateY(-15%) translateX(10px);
+    visibility: visible;
+    opacity: 1;
+}
+
+.nav ul li a .title::before{
+    content: '';
+    position: absolute;
+    top: 48%;
+    left: -8px;
+    width: 12px;
+    height: 12px;
+    background:white;
+    transform: rotate(45deg) translateY(-50%);
+    border-radius: 2px;
+}
